@@ -1,5 +1,6 @@
 # QuintaAssignment
-
+## EmployeeSalary consist of - max,min salary
+## Assignment consist of everything excluding the min , max salary.
 
 Declare a Java Class employee with the following properties
 Name
