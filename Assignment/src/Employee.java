@@ -45,6 +45,20 @@ public class Employee {
 //    public String toString(){
 //        return name+"   "+salary;
 //    }
+	public static  double getAverageValue(List<Employee> list ){
+    	  double averageValue = 0;
+    	  double sum = 0;
+
+    	  if(list.size() > 0){
+    	    for ( int i=0; i < list.size() ; i++) {
+    	      // assuming the product class has a price
+    	      sum += list.get(i).getSalary();
+    	    }
+    	    averageValue = (sum / (double)list.size());
+    	  }
+
+    	  return averageValue;
+    	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List<Employee> list = new ArrayList<Employee>();
@@ -143,14 +157,34 @@ public class Employee {
 
 		           }
 		       }
-//	    	 int sum=0;
-//		     for(int i=0;i<list.size();i++) {
-//		    	
-//		    	 sum += list.get(i).salary;
-//		}
-//		     int n = list.size();
-//		     int avg = sum/n;
-//		     System.out.printf("average is", avg);
+
+		
+		 System.out.println("Average value of the salary");
+	    	 double avg = getAverageValue(list);
+	    	 System.out.println(avg);
+
+	    	 System.out.println("Salaries greater than Average salary are: ");
+	    	 for(int i=0; i < list.size();i++ )
+		       {
+		           if(list.get(i).salary > avg)
+		           {
+		              System.out.println(list.get(i).getName());
+		           }
+		           else{
+
+		           }
+		       }
+	    	 System.out.println("Salaries Smaller than Average salary are: ");
+	    	 for(int i=0; i < list.size();i++ )
+		       {
+		           if(list.get(i).salary < avg)
+		           {
+		              System.out.println(list.get(i).getName());
+		           }
+		           else{
+
+		           }
+		       }
 	    	 
 	     
 }
