@@ -21,7 +21,7 @@ public interface EmployeeRepo extends MongoRepository<Employee,Integer> {
 	@Query(value="{age:{$lt:?0}}")
 	List<Employee> getEmployeeAgeGreater(int age);
 	
-	@Query("{$and:[{region:?0},{age:{$lt:?1}}]}")
+	@Query("{region:?0, age:{$lte:?1}}")
 	List<Employee> getEmployeeAgeandRegion(String region,int age);
 	
 	@Query("{name:{$regex:?0}}")
