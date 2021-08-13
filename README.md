@@ -1,7 +1,10 @@
 # QuintaAssignment
 ## EmployeeSalary consist of - max,min salary
 ## Assignment consist of everything excluding the min , max salary.
-
+## EmployeeSpring - Problem 3
+## EmployeeSpringusingStream - Problem 4
+## EmployeeMongodb - Problem 5
+## 
 Declare a Java Class employee with the following properties
 Name
 Salary
